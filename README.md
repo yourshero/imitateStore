@@ -1,1 +1,2 @@
 # imitateStore
+### npm install
