@@ -1,6 +1,17 @@
 <template>
   <div class="hello">
     <p>HELLO WORLD</p>
+    <div class="block">
+  <span class="demonstration">默认不区分颜色</span>
+  <el-rate v-model="value1"></el-rate>
+</div>
+<div class="block">
+  <span class="demonstration">区分颜色</span>
+  <el-rate
+    v-model="value2"
+    :colors="['#99A9BF', '#F7BA2A', '#FF9900']">
+  </el-rate>
+</div>
     <ul>
     	<li v-for="(item,index) in datalist" :key='index'>
     		<h1>{{item.personName}}:<span>{{item.viewName}}</span></h1>
@@ -16,7 +27,10 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      datalist:[]
+      datalist:[],
+      input: '',
+      value1: null,
+      value2: null
     }
   },
   mounted(){
