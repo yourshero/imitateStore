@@ -1,6 +1,6 @@
 <template>
   <div class="personalCenterRouter">
-      <router-view></router-view>
+    {{message}}
   </div>
 </template>
 <!--mockjs应用页面-->
@@ -10,7 +10,7 @@ export default {
   name: 'personalCenterRouter',
   data () {
     return {
-      message:'这是personalCenterRouter路由过度'
+      message:'这是子路由'
     }
   },
   mounted(){

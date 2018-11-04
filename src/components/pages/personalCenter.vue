@@ -1,6 +1,9 @@
 <template>
   <div class="personalCenter">
-      <router-link to="/personalCenter/pay">支付</router-link>
+      <router-link to='/personalCenter/pay'>{{message}}</router-link>
+      <div class="child">
+            
+        </div>
   </div>
 </template>
 <!--mockjs应用页面-->
@@ -10,10 +13,11 @@ export default {
   name: 'personalCenter',
   data () {
     return {
-      message:'这是personalCenter个人中心'
+      message:'支付'
     }
   },
   mounted(){
+    
   },
   methods:{
 

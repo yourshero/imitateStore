@@ -6,7 +6,8 @@ import Find from '@/components/pages/find'
 import Order from '@/components/pages/order'
 import PersonalCenter from '@/components/pages/personalCenter'
 import PersonalCenterRouter from '@/components/pages/personalCenterRouter'
-import Pay from '@/components/children/pay'
+import Pay from '@/components/personalCenter/pay'
+import Routerpay from '@/components/personalCenter/routerpay'
 Vue.use(Router)
 
 export default new Router({
@@ -33,18 +34,19 @@ export default new Router({
     {
       path: '/personalCenter',
       name: 'personalCenter',
-      component: PersonalCenter
-    },
-    {
-      path: '/personalCenterRouter',
-      name: 'personalCenterRouter',
-      component: PersonalCenterRouter,
-      children: [  //这里就是二级路由的配置
-        {
-          path: '/personalCenter/pay',
-          name: 'pay',
-          component: Pay
-        }]
-    }
-  ]
+      component: PersonalCenter,
+      // children: [  //这里就是二级路由的配置
+      //   {
+      //     path: 'routerpay',
+      //     name:'routerpay',
+      //     component: Routerpay
+      //   }
+      //   ]
+      },
+      {
+        path: '/personalCenter/pay',
+        name: 'pay',
+        component: Pay
+      },
+    ]
 })
