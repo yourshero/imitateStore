@@ -14,7 +14,7 @@
           <h-my></h-my>
       </mt-tab-container-item>
     </mt-tab-container>
-    <mt-tabbar v-model="active">
+    <mt-tabbar v-model="active" class="tabbar">
       <mt-tab-item id="tab-container1">
         首页
       </mt-tab-item>
@@ -68,5 +68,10 @@
 </script>
 <style lang="less" scoped>
   .home {
+    .tabbar{
+      height: 50px;
+      line-height: 50px;
+      font-size: 12px;
+    }
   }
 </style>

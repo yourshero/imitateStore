@@ -1,12 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/pages/HelloWorld'
 import Home from '@/components/pages/home'
+import Address from '@/components/pages/user-address'
 import Find from '@/components/pages/find'
-import Order from '@/components/pages/order'
-import PersonalCenter from '@/components/pages/personalCenter'
-import PersonalCenterRouter from '@/components/pages/personalCenterRouter'
-import Pay from '@/components/personalCenter/pay'
 Vue.use(Router)
 
 export default new Router({
@@ -20,12 +16,17 @@ export default new Router({
       path: '/home',
       name: 'home',
       component: Home
-    }
+    },
+    {
+      path: '/address',
+      name: 'address',
+      component: Address
+    },
     // {
     //   path: '/find',
     //   name: 'find',
     //   component: Find
-    // },
+    // }
     // {
     //   path: '/order',
     //   name: 'order',
