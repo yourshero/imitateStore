@@ -1,13 +1,6 @@
 <template>
   <div id="app">
-    <el-container>
-      <el-main>
     <router-view/>
-      </el-main>
-    <el-footer>
-<NavBottomTabs></NavBottomTabs>
-    </el-footer>
-  </el-container>
   </div>
 </template>
 
@@ -17,7 +10,12 @@ export default {
   name: 'App',
   components:{
       NavBottomTabs
+  },
+    methods: {
+      handleClick: function() {
+   this.$toast('Hello world!');
   }
+    }
 }
 </script>
 
@@ -28,17 +26,20 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 body{
   margin:0;
   padding: 0;
 }
-.el-footer{
+a{
+  text-decoration: none;
+}
+
+/* .el-footer{
   position: fixed;  
   bottom: 0; 
   width: 100%;
-  line-height: 60px;
-  font-size: 12px;
-}
+  font-size: 14px;
+  padding: 0;
+} */
 </style>
