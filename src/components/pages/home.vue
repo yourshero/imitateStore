@@ -66,7 +66,7 @@
     }
   }
 </script>
-<style lang="less" scoped>
+<style lang="less">
   .home {
     .tabbar{
       height: 50px;

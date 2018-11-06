@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/pages/home'
 import Address from '@/components/pages/user-address'
+import ChosseAddress from '@/components/pages/choose-address'
 import Find from '@/components/pages/find'
 Vue.use(Router)
 
@@ -18,9 +19,14 @@ export default new Router({
       component: Home
     },
     {
-      path: '/address',
-      name: 'address',
+      path: '/user-address',
+      name: 'user-address',
       component: Address
+    },
+    {
+      path: '/choose-address',
+      name: 'choose-address',
+      component: ChosseAddress
     },
     // {
     //   path: '/find',

@@ -1,10 +1,10 @@
 <template>
     <div class="homeContent">
         <div class="home-head">
-            <router-link tag="address2" to="/address">
+            <router-link :to="{path:'/user-address',params:'',query:{'cityName':city_name}}">
                <div class="home-head-positon">
                 <i class="el-icon-location postion-icon"></i>
-                <span>未能获取地理位置</span>
+                <span>{{city_name}}</span>
                 <i class="mint-toast-icon mintui mintui-search"></i>
             </div>
             </router-link>
@@ -24,13 +24,17 @@
         name: 'homeContent',
         data() {
             return {
-                message: '这是home页面'
+                message: '这是home页面',
+                city_name:''
             }
         },
         components: {
 
         },
-        mounted() {},
+        mounted() {
+            this.city_name = this.$route.query.cityName;
+            console.log(this.$route)
+        },
         methods: {
             choose_adress:function(){
                 
@@ -38,14 +42,14 @@
         }
     }
 </script>
-<style lang="less" scoped>
+<style lang="less">
     .homeContent {
         background-color: #26a2ff;
         padding: 15px;
         .home-head {
-            color: #fff;
             .home-head-positon {
                 height: 30px;
+            color: #fff;
                 line-height: 30px;
                 display: flex;
                 align-items: center;
