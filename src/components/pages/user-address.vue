@@ -15,13 +15,13 @@
             </mt-search>
         </section>
         <!-- <section class="search-content">
-                <ul infinite-scroll-disabled="loading" infinite-scroll-distance="20">
-                    <li v-for="(item,index) in list" :key='index'>
-                        <h2>{{item.name}}</h2>
-                        <span>{{item.address}}</span>
-                    </li>
-                </ul>
-            </section> -->
+                    <ul infinite-scroll-disabled="loading" infinite-scroll-distance="20">
+                        <li v-for="(item,index) in list" :key='index'>
+                            <h2>{{item.name}}</h2>
+                            <span>{{item.address}}</span>
+                        </li>
+                    </ul>
+                </section> -->
     </div>
 </template>
 
@@ -34,7 +34,7 @@
             return {
                 message: '地址',
                 value: '',
-                city_name: '',
+                city_name: '选择',
                 msg: '',
                 list: {},
                 timeoutId: 0,
@@ -42,7 +42,9 @@
             }
         },
         mounted() {
-            this.city_name = this.$route.query.cityName;
+            if (this.$route.query.cityName) {
+                this.city_name = this.$route.query.cityName;
+            }
         },
         methods: {
             testsearch: function(key_event) {
@@ -116,10 +118,13 @@
                         box-sizing: border-box;
                         display: flex;
                         justify-content: space-around;
-                            text-align: left;
-                        .mint-cell-title{
-
+                        text-align: left;
+                        .mint-cell-value {
+                            font-size: 12px;
+                            flex: 1;
+                            justify-content: flex-end;
                         }
+                        .mint-cell-title {}
                     }
                 }
                 .mint-searchbar {

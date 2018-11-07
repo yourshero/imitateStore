@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '@/components/pages/home'
 import Address from '@/components/pages/user-address'
 import ChosseAddress from '@/components/pages/choose-address'
+import SearchFood from '@/components/pages/search-food'
 import Find from '@/components/pages/find'
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       name: 'choose-address',
       component: ChosseAddress
     },
+    {
+      path: '/search-food',
+      name: 'search-food',
+      component: SearchFood
+    }
     // {
     //   path: '/find',
     //   name: 'find',
