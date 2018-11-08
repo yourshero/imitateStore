@@ -19,7 +19,7 @@
                 </router-link>
             </div>
         </div>
-        <section class="slide1" style="height:120px">
+        <section class="slide1" style="min-height:150px">
             <mt-swipe :auto="0">
                 <mt-swipe-item>
                     <a href="#">
@@ -195,15 +195,13 @@
         .slide1 {
             .mint-swipe {
                 overflow: visible;
+                height: 150px;
             }
             .mint-swipe-items-wrap {}
             .mint-swipe-item {
-                display: flex;
-                flex-wrap: wrap;
                 div {}
             }
             a {
-                text-align: center;
                 float: left;
                 width: 20%;
                 .slide-img-wh {
@@ -226,7 +224,7 @@
                 }
             }
             .mint-swipe-indicators {
-                bottom: -7px;
+                bottom: 10px;
                 .mint-swipe-indicator {
                     border-radius: 0;
                     opacity: 0.2;
