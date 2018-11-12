@@ -59,7 +59,7 @@
                             'output': 'json',
                             'extensions': 'all',
                             'city': this.city_name,
-                            'key': '2211b26cad1ad27d7847f2f6ebf89bba'
+                            'key': '2cf9855d46b45a6c021b4abcde155840'
                         }
                     }).
                     then(res => {

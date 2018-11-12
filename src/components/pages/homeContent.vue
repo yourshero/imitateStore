@@ -19,6 +19,7 @@
                 </router-link>
             </div>
         </div>
+        <!-- 服务列表 -->
         <section class="slide1" style="min-height:150px">
             <mt-swipe :auto="0">
                 <mt-swipe-item>
@@ -123,6 +124,36 @@
                 </mt-swipe-item>
             </mt-swipe>
         </section>
+        <!-- super VIP -->
+        <section class="superVIP">
+            <mt-cell title="超级会员">
+            <span class="hb">▪ 每月领20元红包</span><span>立即开通></span>
+            <img slot="icon" src="@/assets/vip.png">
+            </mt-cell>
+        </section>
+        <!-- 活动1 -->
+        <section class="activity">
+            <div class="activity1">
+                <strong class="activity1-name">品质套餐</strong>
+                <p>搭配齐全吃得好</p>
+                <span class="activity1-buy">立即抢购></span>
+                <img src="@/assets/food1.png" alt="">
+            </div>
+            <div class="activity2">
+                <strong class="activity2-name">限量抢购</strong>
+                <p>超值美味9.9元起</p>
+                <span class="activity2-buy-people"><span>817人</span>人正在抢></span>
+                <img src="@/assets/food2.png" alt="">
+            </div>
+        </section>
+        <!-- slide2 -->
+        <section class="silde2">
+            <mt-swipe :auto="1500">
+            <mt-swipe-item><img src="@/assets/slide2-1.png" alt=""></mt-swipe-item>
+            <mt-swipe-item><img src="@/assets/slide2-2.png" alt=""></mt-swipe-item>
+            <mt-swipe-item><img src="@/assets/slide2-3.png" alt=""></mt-swipe-item>
+            </mt-swipe>
+        </section>
     </div>
 </template>
 <!--mockjs应用页面-->
@@ -188,6 +219,135 @@
                         span {
                             color: #999;
                         }
+                    }
+                }
+            }
+        }
+        .silde2{
+            padding: 0 10px;
+            margin-top: 4px;
+            .mint-swipe{
+            .mint-swipe-items-wrap{
+                min-height: 100px;
+                img{
+                    height: 100%;
+                    width:100%;
+                }
+            }
+        .mint-swipe-indicators{
+                bottom: 0.3125rem;
+            .mint-swipe-indicator{
+                    border-radius: 0;
+                    opacity: 0.2;
+                    width: 0.3125rem;
+                    height: 0.0625rem;
+                
+            }
+            .is-active{
+                    background-color: #00a6ff;
+                }
+        }
+            }
+        }
+        .activity{
+            display: flex;
+            padding: 0 10px;
+            min-height: 150px;
+            justify-content: space-between;
+            margin-top: 5px;
+            .activity1{
+                width: 46.5%;
+                font-size: 12px;
+                text-align: left;
+                padding-left: 10px;
+                padding-top: 10px;
+                background-color: #f4f4f4;
+                position: relative;
+                img{
+                    width: 120px;
+                    height: 80px;
+                    position: absolute;
+                    bottom: 0;
+                    right: 5px;
+                }
+                .activity1-name{
+                    font-size: 16px;
+                }
+                p{
+                    padding: 0;
+                    margin: 6px 0;
+                }
+                .activity1-buy{
+                    font-weight: 700;
+                    color:#af8260;
+                }
+            }
+            .activity2{
+                padding-top: 10px;
+                background-color: #f4f4f4;
+                 width: 46.5%;
+                 padding-left: 10px;
+                font-size: 12px;
+                 text-align: left;
+                 position: relative;
+                img{
+                    width: 120px;
+                    height: 80px;
+                    position: absolute;
+                    bottom: 0;
+                    right: 5px;
+                }
+                .activity2-name{
+                    color:#e81919;
+font-size: 16px;
+                }
+                p{
+padding: 0;
+                    margin: 0;
+                     margin: 6px 0;
+                }
+                .activity2-buy-people{
+                     font-weight: 700;
+                    span{
+                         color:#e81919;
+
+                    }
+                }
+            }
+        }
+        .superVIP{
+            padding: 0 10px;
+            .mint-cell{
+                border-radius: 3px;
+            min-height: 40px;
+            position: relative;
+
+            }
+            .mint-cell-wrapper{
+
+                background-color:#ffefc4;
+                background-image:none;
+                .mint-cell-title{
+                    text-align: left;
+                    .mint-cell-text{
+                        font-weight: 700;
+                        font-size: 14px;
+                        color: #644f1b;
+                    }
+                    img{
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+                .mint-cell-value{
+                    .hb{
+                        position: absolute;
+                        top: 15px;
+                        left: 90px;
+                    }
+                    span{
+                        color: #644f1b;
+                        font-size: 12px;
                     }
                 }
             }
