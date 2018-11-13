@@ -15,13 +15,13 @@
             </mt-search>
         </section>
         <!-- <section class="search-content">
-                    <ul infinite-scroll-disabled="loading" infinite-scroll-distance="20">
-                        <li v-for="(item,index) in list" :key='index'>
-                            <h2>{{item.name}}</h2>
-                            <span>{{item.address}}</span>
-                        </li>
-                    </ul>
-                </section> -->
+                        <ul infinite-scroll-disabled="loading" infinite-scroll-distance="20">
+                            <li v-for="(item,index) in list" :key='index'>
+                                <h2>{{item.name}}</h2>
+                                <span>{{item.address}}</span>
+                            </li>
+                        </ul>
+                    </section> -->
     </div>
 </template>
 
@@ -41,7 +41,16 @@
                 search_val: ''
             }
         },
+        beforeCreate() {
+            console.log('beforeCreate')
+        },
+        created() {
+            console.log('created');
+        },
+        beforeMount() {
+        },
         mounted() {
+            console.log('mounted');
             if (this.$route.query.cityName) {
                 this.city_name = this.$route.query.cityName;
             }

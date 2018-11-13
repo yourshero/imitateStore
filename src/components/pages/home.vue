@@ -60,7 +60,6 @@
       'h-home':HomeContent
     },
     mounted() {
-    
 
     },
     methods: {
@@ -77,6 +76,10 @@
       height: 50px;
       line-height: 50px;
       font-size: 12px;
+      position: fixed;
+      left: 0px;
+      bottom: 0px;
+      width: 100%;
     }
   }
 </style>
